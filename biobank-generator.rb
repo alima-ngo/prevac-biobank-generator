@@ -1,5 +1,5 @@
 bio_bank = {
-  fridge: {n:3, type: "Congélateur"},
+  fridge: {n: 3, type: "Congélateur"},
   shelf: {n: 4, type: "Etagère"},
   rack: {n: 6, type: "Rack"},
   box: {n: 20, type: "Boite 9x9"}
@@ -15,7 +15,7 @@ for i in 1..bio_bank[:fridge][:n] do
   for j in 1..bio_bank[:shelf][:n] do
     s_code = "shelf-#{i_s}"
     a.push "#{f_code},#{s_code},#{bio_bank[:shelf][:type]}"
-    if i_f < bio_bank[:fridge][:n] # NO RACK NOR BOXES IN THE BACKUP FRIDGE
+    if i_f < bio_bank[:fridge][:n] # NO RACK NOR BOXES IN THE BACKUP (LAST) FRIDGE
       for k in 1..bio_bank[:rack][:n] do
         r_code = "rack-#{i_r}"
         a.push "#{s_code},#{r_code},#{bio_bank[:rack][:type]}"
