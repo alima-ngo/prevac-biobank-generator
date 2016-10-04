@@ -1,6 +1,6 @@
 bio_bank = {
-  fridge: {n: 3, type: "Congélateur"},
-  shelf: {n: 4, type: "Etagère"},
+  fridge: {n: 3, type: "Congelateur"},
+  shelf: {n: 4, type: "Etagere"},
   rack: {n: 6, type: "Rack"},
   box: {n: 20, type: "Boite 9x9"}
 }
