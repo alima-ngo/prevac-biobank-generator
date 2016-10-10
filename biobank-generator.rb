@@ -18,10 +18,10 @@ for i in 1..bio_bank[:fridge][:n] do
     if i_f < bio_bank[:fridge][:n] # NO RACK NOR BOXES IN THE BACKUP (LAST) FRIDGE
       for k in 1..bio_bank[:rack][:n] do
         r_code = "rack-#{i_r}"
-        a.push "#{s_code},#{r_code},#{bio_bank[:rack][:type]}"
+        a.push "#{f_code}/#{s_code},#{r_code},#{bio_bank[:rack][:type]}"
         for l in 1..bio_bank[:box][:n] do
           b_code = "box-#{i_b}"
-          a.push "#{r_code},#{b_code},#{bio_bank[:box][:type]}"
+          a.push "#{f_code}/#{s_code}/#{r_code},#{b_code},#{bio_bank[:box][:type]}"
           i_b += 1
         end
         i_r += 1
